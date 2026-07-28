@@ -38,6 +38,7 @@ const float HalfHumanHeight = 36.0f;
 	int iJumpSpectator;
 	float vJumpOrigin[3];
 	float vJumpAngles[3];
+	extern void update_player_info(int onground, int inwater, int walking);
 #endif
 
 #define REGAMEDLL_ADD
@@ -3212,6 +3213,11 @@ void PM_Move(playermove_t *ppmove, int server)
 	{
 		pmove->friction = 1.0f;
 	}
+	update_player_info(
+		pmove->onground != -1,
+		pmove->waterlevel > 1,
+		pmove->movetype == MOVETYPE_WALK
+	);
 }
 
 int PM_GetVisEntInfo(int ent)
