@@ -1,6 +1,7 @@
 [submodule "3rdparty/yapb"]
 	path = 3rdparty/yapb
 	url = https://github.com/hahayoutookind/yapb
+	branch = forced-hl-lib
 [submodule "3rdparty/mainui_cpp"]
 	path = 3rdparty/mainui_cpp
 	url = https://github.com/Velaron/mainui_cpp
