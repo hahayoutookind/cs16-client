@@ -16,7 +16,7 @@ else()
 endif()
 
 option(BUILD_CLIENT "Build client library." ON)
-option(BUILD_MAINUI "Build menu library." ON)
+option(BUILD_MAINUI "Build menu library." OFF)
 option(BUILD_SERVER "Build server library." ON)
 
 set(GAME_DIR "cstrike" CACHE STRING "Game directory name.")
